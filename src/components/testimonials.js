@@ -15,7 +15,7 @@ const feedback = [
     id: "feedback-2",
     content:
       "Money makes your life easier. If you're lucky to have it, you're lucky.Money is only a tool. It will take you wherever you wish, but it will not replace you ",
-    name: "Steve Mark",
+    name: "Mayur Thakur",
     title: "Founder & Leader",
     img: "https://i.imgur.com/fk8eEvW.png",
   },
