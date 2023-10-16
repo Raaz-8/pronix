@@ -1,74 +1,52 @@
 import React, { useEffect, useRef, useState } from "react";
+import s1 from '../assets/services-1.jpg'
+import s2 from '../assets/services-2.jpg'
+import s3 from '../assets/services-3.jpg'
+import s4 from '../assets/services-4.jpg'
+import s5 from '../assets/services-5.jpg'
+import s6 from '../assets/services-6.jpg'
 
 const serv = [
   {
     id: "service-1",
-    content: "Money is only a tool. It will take you wherever you wish.",
-    name: "Herman Jensen",
-    img: "https://i.pinimg.com/originals/83/ec/da/83ecdad9125ee4569cebe1fe85aa6e31.jpg",
+    content: "Web development involves creating and maintaining websites. This can include front-end development, back-end development, and full-stack development. It also often involves using various programming languages and frameworks.",
+    name: "Web Development",
+    img: s1,
   },
   {
     id: "service-2",
-    content: "Money makes your life easier. ",
-    name: "Steve Mark",
-    img: "https://i.pinimg.com/originals/83/ec/da/83ecdad9125ee4569cebe1fe85aa6e31.jpg",
+    content: "Data entry services involve inputting data from various sources into digital formats. This can include tasks like transcribing handwritten documents, entering data from spreadsheets into databases, or populating e-commerce product catalogs.",
+    name: "Data Entry",
+    img: s2,
   },
   {
     id: "service-3",
     content:
-      "It is usually people in the money business, finance, and international trade",
-    name: "Kenn Gallagher",
-    img: "https://i.pinimg.com/originals/83/ec/da/83ecdad9125ee4569cebe1fe85aa6e31.jpg",
+      "Data analytics is the process of examining, cleaning, transforming, and modeling data to discover useful information, draw conclusions, and support decision-making. It often involves tools like Excel, SQL, Python, and specialized data analytics software.",
+    name: "Data Analytics",
+    img: s3,
   },
   {
-    id: "service-3",
+    id: "service-4",
     content:
-      "It is usually people in the money business, finance, and international trade",
-    name: "Kenn Gallagher",
-    img: "https://i.pinimg.com/originals/83/ec/da/83ecdad9125ee4569cebe1fe85aa6e31.jpg",
+      "Creative design services encompass graphic design, UI/UX design, and branding. This includes creating visual elements for websites, apps, marketing materials, logos, and other design assets to enhance the overall look and feel of a brand.",
+    name: "Creative Designs",
+    img:s4,
   },
   {
-    id: "service-3",
+    id: "service-5",
     content:
-      "It is usually people in the money business, finance, and international trade",
-    name: "Kenn Gallagher",
-    img: "https://i.pinimg.com/originals/83/ec/da/83ecdad9125ee4569cebe1fe85aa6e31.jpg",
+      "Content writing services involve creating written content for websites, blogs, marketing materials, and other digital platforms. Content writers produce articles, blog posts, product descriptions, and other forms of written content to inform and engage the target audience.",
+    name: "Content Writing",
+    img: s5,
   },
   {
-    id: "service-3",
+    id: "service-6",
     content:
-      "It is usually people in the money business, finance, and international trade",
-    name: "Kenn Gallagher",
-    img: "https://i.pinimg.com/originals/83/ec/da/83ecdad9125ee4569cebe1fe85aa6e31.jpg",
-  },
-  {
-    id: "service-3",
-    content:
-      "It is usually people in the money business, finance, and international trade",
-    name: "Kenn Gallagher",
-    img: "https://i.pinimg.com/originals/83/ec/da/83ecdad9125ee4569cebe1fe85aa6e31.jpg",
-  },
-  {
-    id: "service-3",
-    content:
-      "It is usually people in the money business, finance, and international trade",
-    name: "Kenn Gallagher",
-    img: "https://i.pinimg.com/originals/83/ec/da/83ecdad9125ee4569cebe1fe85aa6e31.jpg",
-  },
-  {
-    id: "service-3",
-    content:
-      "It is usually people in the money business, finance, and international trade",
-    name: "Kenn Gallagher",
-    img: "https://i.pinimg.com/originals/83/ec/da/83ecdad9125ee4569cebe1fe85aa6e31.jpg",
-  },
-  {
-    id: "service-3",
-    content:
-      "It is usually people in the money business, finance, and international trade",
-    name: "Kenn Gallagher",
-    img: "https://i.pinimg.com/originals/83/ec/da/83ecdad9125ee4569cebe1fe85aa6e31.jpg",
-  },
+      "Event management services cover the planning, organization, and execution of events, such as conferences, exhibitions, trade shows, weddings, and corporate events. This includes logistics, budgeting, marketing, and ensuring that the event runs smoothly.",
+    name: "Event Management",
+    img: s6,
+  }
 ];
 
 const RevealOnScroll = ({ children }) => {
@@ -103,22 +81,25 @@ const RevealOnScroll = ({ children }) => {
 
 const Servicecard = () => {
   return (
-    <div>
-      <div className="container flex w-full justify-between mt-8 mx-auto text-center items-center">
-        <RevealOnScroll className="w-full flex justify-between">
+   
+      <div>
+        <RevealOnScroll className="w-full flex justify-center max-sm:float-none">
           {serv.map((card) => (
-            <div className="max-sm:w-5/12 p-2 outline outline-2 outline-amber-600 float-left flex flex-col justify-center m-4">
-              <img
-                className="h-48 max-sm:h-32"
-                alt="ServiceCard"
-                src={card.img}
-              />
-              <p className="m-2 text-amber-600 font-semibold">{card.name}</p>
-            </div>
+       
+              <div key={card.id} class="p-10 float-left ">
+                <div  class="max-w-sm rounded overflow-hidden shadow-lg ">
+                  <img class="w-full" src={card.img} alt={card.name}></img>
+                  <div class="px-6 py-4">
+                    <p class="font-bold text-xl mb-2">{card.name}</p>
+                    <p class="text-gray-700 text-base pb-8">{card.content}</p>
+                  </div>
+                </div>
+              </div>
+        
           ))}
         </RevealOnScroll>
       </div>
-    </div>
+ 
   );
 };
 

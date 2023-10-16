@@ -1,20 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;800&family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;600;700;800&family=Righteous&display=swap');
+
+::-webkit-scrollbar{
+  display: none;
+} 
+
 
 *{
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+
+
+#about{
+  height:auto;
+  overflow: hidden;
 }
 
 #contact{
-  height: 100vh;
+  height: auto;
 }
 
+#clients{
+  height: 100vh;
+}
 
 body{
     transition: 0.5s;
     font-family: 'Encode Sans', sans-serif;
+    line-height: 1.7;
 }
 
 .bg{
@@ -35,7 +59,7 @@ body{
 }
 
 .logo{
-    width: 10%;
+    width: 15%;
     /* margin-left: 7%; */
 }
 
@@ -82,3 +106,84 @@ body{
   .slider-container {
     @apply w-full;
   }
+
+  .card{
+    float: left;
+
+    width: 75%;
+  }
+
+  footer{
+    background-color: #ffee0035;
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 7rem;
+}
+
+.footer_logo{
+    margin-bottom: 2rem;
+    display: inline-block;
+    width: 14rem;
+    transform: rotate(2deg);
+}
+
+.permalinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin:0 auto 3rem ;
+}
+
+.footer_socials{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2%;
+}
+
+.footer_socials a{
+  
+    color: #fff;
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display: flex;
+    border: 1px solid white;
+}
+
+
+
+.footer_copy{
+    margin-bottom: 4rem;
+    color: #fff;
+}
+
+
+@media screen and (max-width:600px) {
+    .permalinks{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer_socials{
+        margin-bottom: 2.6rem;
+    }
+}
+
+
+.abt-img{
+  
+  left: 0rem;
+  margin-top: 18%;
+  opacity: 0.8;
+  width: 50rem;
+
+}
+
+.abt-head{
+  width: 100%;
+  text-align: left;
+}
+
+

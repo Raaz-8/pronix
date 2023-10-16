@@ -1,25 +1,32 @@
 import React from "react";
+import {AiFillLinkedin} from 'react-icons/ai'
+import {AiFillInstagram} from 'react-icons/ai'
+import {BsTwitter} from 'react-icons/bs'
+
 const Footer = () => {
   return (
-    <div className="h-auto bg-amber-700 ">
-      <div className="flex w-3/4 p-4 justify-center">
-        <div className="m-4 text-white font-semibold">
-          <p><a href="#">Home</a></p>
-          <p><a href="#about">About</a></p>
-          <p><a href="#contact">Contact</a></p>
-          <p><a href="#services">Services</a></p>
-        </div>
-        <div className="flex my-4 mx-14 justify-between w-4/12 text-white flex-col">
-          <p>FaceBook</p>
-          <p>Instagram</p>
-          <p>X (Twitter)</p>
-          <p>LinkedIn</p>
-        </div>
+    
+    <footer className="bg-amber-600">
+
+      <ul className='permalinks text-white font-semibold'>
+        <li><a href='#'>Home</a></li>
+        <li><a href='#services'>Services</a></li>
+        <li><a href='#about'>About</a></li>
+        <li><a href='#contact'>Contact</a></li>
+      </ul>
+
+      <div className='footer_socials'>
+        <a href='https://instagram.com/pronix_solutions' target='_blank'><AiFillInstagram/></a>
+        <a href='https://twitter.com/PrachiKo_' target='_blank'><BsTwitter/></a>
+        <a href='http://www.linkedin.com/in/pronix-solutions1508' target='_blank'> <AiFillLinkedin/> </a>
       </div>
-      <div className="flex py-4 px-14 justify-center items-center w-full text-white flex-col">
-        <p>&copy; ProNix Solutions, 2023</p>
+
+      <div className='footer_copy'>
+        <small>&copy; ProNix Solutions, 2023. All Rights Reserved.</small>
       </div>
-    </div>
+
+    </footer>
+ 
   );
 };
 
