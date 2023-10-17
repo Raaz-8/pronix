@@ -8,6 +8,14 @@
   display: none;
 } 
 
+@media screen and (max-width:600px) {
+  .abt-img{
+    max-width: 10%;
+  }
+  .abt-img img{
+    width: 10px;
+  }
+}
 
 *{
   margin: 0;
@@ -117,7 +125,7 @@ body{
     background-color: #ffee0035;
     padding: 3rem 0;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     margin-top: 7rem;
 }
 
@@ -169,6 +177,7 @@ body{
     .footer_socials{
         margin-bottom: 2.6rem;
     }
+
 }
 
 
@@ -186,4 +195,10 @@ body{
   text-align: left;
 }
 
+
+.serv{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
+}
 

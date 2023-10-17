@@ -81,24 +81,25 @@ const RevealOnScroll = ({ children }) => {
 
 const Servicecard = () => {
   return (
-   
-      <div>
-        <RevealOnScroll className="w-full flex justify-center max-sm:float-none ">
+    <RevealOnScroll>
+      <section className="serv max-sm:flex max-sm:flex-col">
+        
           {serv.map((card) => (
        
-              <div key={card.id} class="p-10 float-left text-amber-600">
+              <div key={card.id} class="p-6 m-0 text-amber-600">
                 <div  class="max-w-sm rounded overflow-hidden shadow-lg ">
                   <img class="w-full" src={card.img} alt={card.name}></img>
                   <div class="px-6 py-4 text-amber-700">
-                    <p class="font-bold text-xl mb-2">{card.name}</p>
-                    <p class=" text-base pb-8">{card.content}</p>
+                    <p class="font-semibold text-xl mb-2">{card.name}</p>
+                    <p class=" text-base pb-8 text-justify">{card.content}</p>
                   </div>
                 </div>
               </div>
         
           ))}
+          </section>
         </RevealOnScroll>
-      </div>
+      
  
   );
 };

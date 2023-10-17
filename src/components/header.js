@@ -3,7 +3,7 @@ import logo from '../assets/pronix-logo.png'
 
 const Header = () => {
   return (
-    <div >
+    <header>
         
         <div className='header z-100 max-sm:px-3'>
         
@@ -18,7 +18,7 @@ const Header = () => {
             </div>
         </div>
         
-    </div>
+    </header>
   )
 }
 

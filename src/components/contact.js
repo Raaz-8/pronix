@@ -20,15 +20,15 @@ const Contact = () => {
       id="contact"
       className="relative w-full min-h-screen bg-white text-amber-600"
     >
-      <h1 className="text-5xl py-8 px-12 font-bold tracking-wide text-amber-600">Contact</h1>
+      <h1 className="text-5xl py-8 px-12 font-bold tracking-wide text-amber-600 max-sm:text-center ">Contact</h1>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-32 w-full"></div>
 
-      <div className="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center">
-        <div className="w-full md:w-1/2 p-5 md:px-0 mx-5">
-          <div className="bg-amber-100 border border-amber-600 w-full lg:w-1/2 h-full p-5 pt-8">
+      <div className="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center max-sm:text-center">
+        <div className="w-full md:w-1/2 py-5 md:px-0 mx-5">
+          <div className="bg-amber-100 border border-amber-600 w-full  lg:w-1/2 h-full p-5 pt-8">
             <h3 className="text-2xl font-semibold mb-5">My Social Media</h3>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 max-sm:items-center">
               <a
                 href="https://twitter.com/PrachiKo_"
                 className="flex items-center hover:text-white hover:bg-amber-500 p-2" target='_blank'
